@@ -1,0 +1,19 @@
+{%extends 'learning_logs/base.html' %}
+
+{%block titulo%}Novo Topico{%endblock%}
+
+{% block content %}
+<h3>Adicione um novo topico</h3>
+
+<form  method='post'>
+{%csrf_token%}
+
+{{form.as_p}}
+
+<button name='submit'>Salvar</button>
+    
+</form>
+
+
+
+{% endblock content %}
