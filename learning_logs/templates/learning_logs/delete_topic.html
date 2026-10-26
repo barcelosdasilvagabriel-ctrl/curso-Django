@@ -1,0 +1,19 @@
+{% extends "learning_logs/base.html" %}
+
+{%block titulo%}Delete{%endblock titulo%}
+
+{%block content%} 
+
+<h3>Excluir {{topic.text}}</h3>
+
+<form method='POST'>
+
+    {%csrf_token%}
+
+    <button name=submit>Excuir</button>
+
+
+</form>    
+
+
+{%endblock content%}

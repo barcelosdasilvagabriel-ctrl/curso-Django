@@ -49,3 +49,14 @@ def new_topic(request):
     contexto = {'form':form}
     return render(request,'learning_logs/new_topic.html',contexto)
     
+    
+def delete_topic(request,topic_id):
+    if request.method != 'POST':
+        topico = Topic.objects.get(id=topic_id)
+    else:
+        topico = Topic.objects.get(id=topic_id)
+        topico.delete()
+        return HttpResponseRedirect(reverse('topics'))
+    
+    context = {"topic":topico}
+    return render(request,"learning_logs/delete_topic.html",context)
