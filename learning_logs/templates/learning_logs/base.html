@@ -16,10 +16,12 @@
 
             Olá {{user.username}}
 
+            <a href="{%url 'logout'%}">sair</a>
 
         {%else%}
 
-        <a href="{%url 'login' %}">Login</a>
+        <a href="{%url 'login' %}">Login</a>|
+        <a href="{%url 'register'%}">registrar</a>
 
          {%endif%}
         
