@@ -1,0 +1,24 @@
+{%extends "learning_logs/base.html"%}
+
+{% block titulo %}Nova Anotação{% endblock titulo %}
+
+{% block content %}
+
+
+<p><a href="{%url 'topic' topic.id %}">{{topic}}</a></p>
+
+<h3>Adicionar anotação:</h3>
+
+<form method='POST'>
+
+    {%csrf_token%}
+
+    {{form.as_p}}
+
+    <button name='submit'>Adicionar</button>
+
+</form>
+
+
+
+{% endblock content %}

@@ -6,7 +6,7 @@
 
     <h3>Topico : {{topic}}</h3>
 
-    <p>Entradas : </p>
+    <p>Anotações : </p>
     <ul>
 
         {%for entry in entries%}
@@ -23,7 +23,7 @@
         {%endfor%}
 
     </ul>
-
+    <p><a href="{%url 'new_entry' topic.id%}">Nova anotação</a></p>
     <p><a href="{%url 'delete_topic' topic.id%}">Excluir</a></p>
 
 {%endblock%}
